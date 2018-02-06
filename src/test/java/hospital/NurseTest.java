@@ -7,7 +7,8 @@ import org.junit.Test;
 
 public class NurseTest {
 
-	MedicalDuties underTest = new Nurse();
+	MedicalDuties underTest = new Nurse("", "");
+	
 	
 	boolean wasBled = false;
 
@@ -31,7 +32,7 @@ public class NurseTest {
 
 	@Test
 	public void shouldHaveSalary() {
-		Employee underTest = new Nurse();
+		Employee underTest = new Nurse("", "");
 		
 		int salary = underTest.calculatePay();
 		

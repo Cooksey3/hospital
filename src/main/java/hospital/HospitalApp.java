@@ -8,6 +8,7 @@ public class HospitalApp {
 		Surgeon harry = new Surgeon("1112", "Harry", "Brain", true);
 		Nurse jackie = new Nurse("1113", "Jackie");
 		Receptionist rosie = new Receptionist("1114", "Rosie", true);
+		Janitor jimmy = new Janitor("1115", "Jimmy", true);
 
 		Hospital hospital = new Hospital();
 
@@ -15,6 +16,7 @@ public class HospitalApp {
 		hospital.addEmployee(harry);
 		hospital.addEmployee(jackie);
 		hospital.addEmployee(rosie);
+		hospital.addEmployee(jimmy);
 
 		System.out.println("Here are the pay rates at High St. Hospital:");
 		hospital.showPayRates();

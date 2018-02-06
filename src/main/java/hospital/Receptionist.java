@@ -2,7 +2,7 @@ package hospital;
 
 public class Receptionist extends Employee {
 
-	private boolean isOnThePhone;
+	private boolean isOnThePhone = true;
 
 	public Receptionist(String employeeNumber, String employeeName, boolean isOnThePhone) {
 		this.employeeNumber = employeeNumber;
@@ -13,6 +13,10 @@ public class Receptionist extends Employee {
 	@Override
 	public int calculatePay() {
 		return 45000;
+	}
+
+	public boolean isOnThePhone() {
+		return isOnThePhone;
 	}
 
 }
