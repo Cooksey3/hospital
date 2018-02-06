@@ -8,7 +8,7 @@ public abstract class Employee {
 	public String payInfo() {
 		return "This employee's salary is " + calculatePay();
 	}
-	
+
 	public abstract int calculatePay();
 
 	public String getEmployeeNumber() {
@@ -16,6 +16,11 @@ public abstract class Employee {
 	}
 
 	public String getEmployeeName() {
+		return employeeName;
+	}
+
+	@Override
+	public String toString() {
 		return employeeName;
 	}
 

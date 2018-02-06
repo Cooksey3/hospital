@@ -1,10 +1,13 @@
 package hospital;
 
 public class Doctor extends Employee implements MedicalDuties {
-
-	public Doctor(String employeeNumber, String employeeName) {
+	
+	protected String specialty;
+	
+	public Doctor(String employeeNumber, String employeeName, String specialty) {
 		this.employeeNumber = employeeNumber;
 		this.employeeName = employeeName;
+		this.specialty = specialty;
 	}
 
 	@Override
@@ -21,5 +24,8 @@ public class Doctor extends Employee implements MedicalDuties {
 	public void administerCare(Patient patient) {
 		patient.addHealth(10);
 	}
-
+	
+	public String getSpecialty() {
+		return specialty;
+	}
 }

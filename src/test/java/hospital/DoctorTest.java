@@ -8,8 +8,8 @@ import org.junit.Test;
 
 public class DoctorTest {
 
-	Doctor underTest = new Doctor("1111", "Phil");
-	
+	Doctor underTest = new Doctor("1111", "Phil", "Brain");
+
 	@Test
 	public void shouldDrawBlood() {
 		Patient patient = new Patient();
@@ -65,14 +65,18 @@ public class DoctorTest {
 	@Test
 	public void shouldReturnEmployeeNumber() {
 		String check = underTest.getEmployeeNumber();
-		assertEquals(check, "Phil");
-
+		assertEquals(check, "1111");
 	}
-	
+
 	@Test
 	public void shouldReturnEmployeeName() {
 		String check = underTest.getEmployeeName();
 		assertEquals(check, "Phil");
-
+	}
+	
+	@Test
+	public void shouldReturnDoctorSpecialty() {
+		String check = underTest.getSpecialty();
+		assertEquals(check, "Brain");
 	}
 }

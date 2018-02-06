@@ -9,7 +9,7 @@ public class ReceptionistTest {
 	
 	@Test
 	public void shouldHaveSalary() {
-		Employee underTest = new Receptionist();
+		Receptionist underTest = new Receptionist("");
 		
 		int salary = underTest.calculatePay();
 		
