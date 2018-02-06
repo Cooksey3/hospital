@@ -7,9 +7,8 @@ import org.junit.Test;
 
 public class NurseTest {
 
-	MedicalDuties underTest = new Nurse("", "");
-	
-	
+	MedicalDuties underTest = new Nurse("", "", 0);
+
 	boolean wasBled = false;
 
 	public class BleedableDouble implements Bleedable {
@@ -32,22 +31,30 @@ public class NurseTest {
 
 	@Test
 	public void shouldHaveSalary() {
-		Employee underTest = new Nurse("", "");
-		
+		Employee underTest = new Nurse("", "", 0);
+
 		int salary = underTest.calculatePay();
-		
+
 		assertThat(salary, is(50000));
 	}
-	
+
 	@Test
 	public void increasePatientHealth() {
 		Patient patient = new Patient();
-		
+
 		int healthBefore = patient.getHealthLevel();
-		
+
 		underTest.administerCare(patient);
-		
+
 		int healthAfter = patient.getHealthLevel();
 		assertThat(healthAfter - healthBefore, is(5));
 	}
+	
+	@Test
+	public void shouldHavePatients() {
+		Nurse underTest = new Nurse ("", "", 0);
+		int numberOfPatients = underTest.getNumberOfPatients();
+		assertThat(numberOfPatients, is(20));
+	}
+
 }

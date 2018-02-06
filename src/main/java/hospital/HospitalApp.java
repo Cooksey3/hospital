@@ -6,7 +6,7 @@ public class HospitalApp {
 
 		Doctor phil = new Doctor("1111", "Phil", "Brain");
 		Surgeon harry = new Surgeon("1112", "Harry", "Brain", true);
-		Nurse jackie = new Nurse("1113", "Jackie");
+		Nurse jackie = new Nurse("1113", "Jackie", 20);
 		Receptionist rosie = new Receptionist("1114", "Rosie", true);
 		Janitor jimmy = new Janitor("1115", "Jimmy", true);
 

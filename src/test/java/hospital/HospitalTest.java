@@ -25,7 +25,7 @@ public class HospitalTest {
 	public void shouldAddTwoEmployees() {
 		Hospital hospital = new Hospital();
 		Doctor doctor = new Doctor("111", "", "");
-		Nurse nurse = new Nurse("112", "");
+		Nurse nurse = new Nurse("112", "", 0);
 		hospital.addEmployee(doctor);
 		hospital.addEmployee(nurse);
 

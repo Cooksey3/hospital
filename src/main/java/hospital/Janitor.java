@@ -7,8 +7,8 @@ public class Janitor extends Employee {
 	public Janitor(String employeeNumber, String employeeName, boolean isSweeping) {
 		this.employeeName = employeeName;
 		this.employeeNumber = employeeNumber;
-		this.isSweeping  = isSweeping;
-		
+		this.isSweeping = isSweeping;
+
 	}
 
 	@Override

@@ -2,9 +2,12 @@ package hospital;
 
 public class Nurse extends Employee implements MedicalDuties {
 
-	public Nurse(String employeeNumber, String employeeName) {
+	private int numberOfPatients;
+
+	public Nurse(String employeeNumber, String employeeName, int numberOfPatients) {
 		this.employeeNumber = employeeNumber;
 		this.employeeName = employeeName;
+		this.numberOfPatients = numberOfPatients;
 	}
 
 	@Override
@@ -20,7 +23,10 @@ public class Nurse extends Employee implements MedicalDuties {
 	@Override
 	public void administerCare(Patient patient) {
 		patient.addHealth(5);
+	}
 
+	public int getNumberOfPatients() {
+		return numberOfPatients;
 	}
 
 }

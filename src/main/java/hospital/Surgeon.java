@@ -2,7 +2,7 @@ package hospital;
 
 public class Surgeon extends Doctor {
 
-	private boolean isOperating;
+	private boolean isOperating = false;
 
 	public Surgeon(String employeeNumber, String employeeName, String specialty, boolean isOperating) {
 		super(employeeNumber, employeeName, specialty);
