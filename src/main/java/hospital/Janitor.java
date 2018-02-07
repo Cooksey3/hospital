@@ -20,4 +20,8 @@ public class Janitor extends Employee {
 		return isSweeping;
 	}
 
+	@Override
+	public String toString() {
+		return employeeName + "\t|" + employeeNumber + "\t|" + isSweeping;
+	}
 }

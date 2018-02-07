@@ -29,4 +29,9 @@ public class Nurse extends Employee implements MedicalDuties {
 		return numberOfPatients;
 	}
 
+	@Override
+	public String toString() {
+		return employeeName + "\t|" + employeeNumber + "\t|" + numberOfPatients;
+	}
+
 }

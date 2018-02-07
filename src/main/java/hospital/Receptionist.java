@@ -19,4 +19,8 @@ public class Receptionist extends Employee {
 		return isOnThePhone;
 	}
 
+	@Override
+	public String toString() {
+		return employeeName + "\t|" + employeeNumber + "\t|" + isOnThePhone;
+	}
 }

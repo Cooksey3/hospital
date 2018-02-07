@@ -18,11 +18,22 @@ public class HospitalApp {
 		hospital.addEmployee(rosie);
 		hospital.addEmployee(jimmy);
 
+		System.out.println("Here are the current employees at High St. Hospital: ");
+		System.out.println("Name\t|Emp. No|Status");
+		System.out.println("--------|-------|-------");		
+		hospital.printStaffInfo();
+		System.out.println();
+
 		System.out.println("Here are the pay rates at High St. Hospital:");
 		hospital.showPayRates();
+		System.out.println();
 
 		System.out.println("Here are employees with medical duties: ");
+		System.out.println("Name\t|Emp. No|Status");
 		hospital.showAllMedicalPersonnel();
+		
+		
+
 
 	}
 

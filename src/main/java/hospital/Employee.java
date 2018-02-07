@@ -6,7 +6,7 @@ public abstract class Employee {
 	protected String employeeName;
 
 	public String payInfo() {
-		return "This employee's salary is " + calculatePay();
+		return "'s salary is " + calculatePay();
 	}
 
 	public abstract int calculatePay();
@@ -21,7 +21,7 @@ public abstract class Employee {
 
 	@Override
 	public String toString() {
-		return employeeName;
+		return employeeName + "\t" + employeeNumber;
 	}
 
 }

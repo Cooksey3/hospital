@@ -12,6 +12,10 @@ public class Hospital {
 		employees.put(employee.getEmployeeNumber(), employee);
 	}
 
+	public void fireEmployee(Employee employee) {
+		employees.remove(employee.employeeNumber);
+	}
+	
 	public Collection<Employee> getAllEmployees() {
 		return employees.values();
 	}
@@ -29,5 +33,12 @@ public class Hospital {
 			}
 		}
 	}
+	
+	public void printStaffInfo() {
+		for(Employee employee : employees.values()) {
+			System.out.println(employee.toString());
+		}
+	}
+
 
 }
