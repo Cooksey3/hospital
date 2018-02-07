@@ -3,7 +3,7 @@ package hospital;
 public class Patient implements Bleedable {
 
 	static final int DEFAULT_BLOOD_LEVEL = 50;
-	static final int DEFAULT_HEALTH_LEVEL = 10;
+	static final int DEFAULT_HEALTH_LEVEL = 50;
 
 	private int bloodLevel = DEFAULT_BLOOD_LEVEL;
 	private int healthLevel = DEFAULT_HEALTH_LEVEL;

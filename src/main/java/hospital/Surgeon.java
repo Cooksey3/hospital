@@ -15,6 +15,15 @@ public class Surgeon extends Doctor {
 	}
 
 	public boolean isOperating() {
+		Patient patient = new Patient();
+		if (patient.getHealthLevel() < 10) {
+			return true;
+		}
 		return isOperating;
+	}
+
+	@Override
+	public String toString() {
+		return employeeName + "\t|" + employeeNumber + "\t|" + specialty + "\t|" + isOperating;
 	}
 }

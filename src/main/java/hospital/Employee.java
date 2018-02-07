@@ -21,7 +21,7 @@ public abstract class Employee {
 
 	@Override
 	public String toString() {
-		return employeeName + "\t" + employeeNumber;
+		return employeeName + "\t|" + employeeNumber;
 	}
 
 }

@@ -15,4 +15,5 @@ public class ZombieJanitor extends Janitor implements BloodTakers {
 	public void drawBlood(Bleedable patient) {
 		patient.removeBlood(15);
 	}
+	
 }

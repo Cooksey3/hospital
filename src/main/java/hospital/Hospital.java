@@ -15,42 +15,43 @@ public class Hospital {
 	public void fireEmployee(Employee employee) {
 		employees.remove(employee.employeeNumber);
 	}
-	
+
 	public Collection<Employee> getAllEmployees() {
 		return employees.values();
 	}
 
 	public void showPayRates() {
 		for (Employee employee : employees.values()) {
-			System.out.println(employee.getEmployeeName() + " " + employee.payInfo());
+			System.out.println(
+					employee.employeeName + "\t|" + employee.employeeNumber + "\t|" + employee.calculatePay() + "\t|");
 		}
 	}
 
 	public void showAllMedicalPersonnel() {
 		for (Employee employee : employees.values()) {
 			if (employee instanceof MedicalDuties) {
-				System.out.println(employee);
+				System.out.println(employee.employeeName + "\t|" + employee.employeeNumber + "\t|");
 			}
 		}
 	}
-	
+
 	public void showBloodTakingPersonnel() {
 		for (Employee employee : employees.values()) {
 			if (employee instanceof BloodTakers) {
-				System.out.println(employee);
+				System.out.println(employee.employeeName + "\t|" + employee.employeeNumber + "\t|");
 			}
 		}
 	}
-	
+
 	public void printStaffInfo() {
-		for(Employee employee : employees.values()) {
+		for (Employee employee : employees.values()) {
 			System.out.println(employee.toString());
 		}
 	}
-	
+
 	public void showAllAdministrativePersonnel() {
 		for (Employee employee : employees.values()) {
-			if (!(employee instanceof BloodTakers)) {
+			if (!(employee instanceof MedicalDuties)) {
 				System.out.println(employee);
 			}
 		}
