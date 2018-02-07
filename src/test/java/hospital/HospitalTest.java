@@ -3,7 +3,6 @@ package hospital;
 import static org.hamcrest.Matchers.contains;
 import static org.hamcrest.Matchers.containsInAnyOrder;
 import static org.hamcrest.Matchers.is;
-import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertThat;
 
 import java.util.Collection;
@@ -44,11 +43,9 @@ public class HospitalTest {
 		hospital.addEmployee(doctor);
 		hospital.addEmployee(nurse);
 		hospital.fireEmployee(nurse);
-		
-		Collection<Employee> check = hospital.getAllEmployees();
-		
-		assertThat(check.contains(nurse), is(false));
-		
-	}
 
+		Collection<Employee> check = hospital.getAllEmployees();
+
+		assertThat(check.contains(nurse), is(false));
+	}
 }

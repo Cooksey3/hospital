@@ -34,11 +34,26 @@ public class Hospital {
 		}
 	}
 	
+	public void showBloodTakingPersonnel() {
+		for (Employee employee : employees.values()) {
+			if (employee instanceof BloodTakers) {
+				System.out.println(employee);
+			}
+		}
+	}
+	
 	public void printStaffInfo() {
 		for(Employee employee : employees.values()) {
 			System.out.println(employee.toString());
 		}
 	}
-
+	
+	public void showAllAdministrativePersonnel() {
+		for (Employee employee : employees.values()) {
+			if (!(employee instanceof BloodTakers)) {
+				System.out.println(employee);
+			}
+		}
+	}
 
 }

@@ -52,7 +52,7 @@ public class NurseTest {
 	
 	@Test
 	public void shouldHavePatients() {
-		Nurse underTest = new Nurse ("", "", 0);
+		Nurse underTest = new Nurse ("", "", 20);
 		int numberOfPatients = underTest.getNumberOfPatients();
 		assertThat(numberOfPatients, is(20));
 	}
